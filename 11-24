@@ -1,0 +1,42 @@
+intrinsic attributes:mode & length
+
+Vectors must have their values all of the same mode.
+
+R also operates on objects called lists, which are of mode list. These are ordered sequences of objects which individually can be of any mode. lists are known as “recursive” rather than atomic structures since their components can themselves be lists in their own right.
+
+The functions mode(object) and length(object) can be used to find out the mode and length of any defined structure.(intrinsic attribute)
+
+the empty character string vector is listed as character() and the empty numeric vector as numeric().
+
+> e <- numeric()
+
+> digits <- as.character(z)
+
+> d <- as.integer(digits)
+
+changing the length of an object
+
+> length(alpha) <- 3
+
+Ordered and unordered factors
+
+state <- c("tas", "sa",  "qld", "nsw", "nsw", "nt",  "wa",  "wa",
+             "qld", "vic", "nsw", "vic", "qld", "qld", "sa",  "tas",
+             "sa",  "nt",  "wa",  "vic", "qld", "nsw", "nsw", "wa",
+             "sa",  "act", "nsw", "vic", "vic", "act")
+
+> statef <- factor(state)
+
+> levels(statef)
+
+> incomes <- c(60, 49, 40, 61, 64, 60, 59, 54, 62, 69, 70, 42, 56,
+               61, 61, 61, 58, 51, 48, 65, 49, 49, 41, 48, 52, 46,
+               59, 46, 58, 43)
+
+> incmeans <- tapply(incomes, statef, mean)
+
+
+> stdError <- function(x) sqrt(var(x)/length(x))
+> incster <- tapply(incomes, statef, stdError)
+
+
