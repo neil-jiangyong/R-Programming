@@ -1,1 +1,35 @@
+An R list is an object consisting of an ordered collection of objects known as its components. There is no particular need for the components to be of the same mode or type.
+
+Lst <- list(name_1=object_1, …, name_m=object_m)
+If these names are omitted, the components are numbered only. 
+
+> Lst <- list(name="Fred", wife="Mary", no.children=3,
+              child.ages=c(4,7,9))  # Lst[[1]], Lst[[2]], Lst[[3]] and Lst[[4]]
+
+Lst$name is the same as Lst[[1]] and is the string "Fred",
+Lst$wife is the same as Lst[[2]] and is the string "Mary",
+Lst$child.ages[1] is the same as Lst[[4]][1] and is the number 4.
+
+Concatenating lists
+> list.ABC <- c(list.A, list.B, list.C)
+
+-------
+
+data frame
+
+A data frame is a list with class "data.frame". A data frame may for many purposes be regarded as a matrix with columns possibly of differing modes and attributes. A list whose components conform to the restrictions of a data frame may be coerced into a data frame using the function as.data.frame(). The simplest way to construct a data frame from scratch is to use the read.table() function to read an entire data frame from an external file.
+
+ex.
+> accountants <- data.frame(home=statef, loot=incomes, shot=incomef)
+
+A useful convention that allows you to work with many different problems comfortably together in the same working directory is
+
+gather together all variables for any well defined and separate problem in a data frame under a suitably informative name;
+when working with a problem attach the appropriate data frame at position 2, and use the working directory at level 1 for operational quantities and temporary variables;
+before leaving a problem, add any variables you wish to keep for future reference to the data frame using the $ form of assignment, and then detach();
+finally remove all unwanted variables from the working directory and keep it as clean of left-over temporary variables as possible.
+
+
+
+
 
