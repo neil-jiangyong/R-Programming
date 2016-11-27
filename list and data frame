@@ -29,7 +29,3 @@ when working with a problem attach the appropriate data frame at position 2, and
 before leaving a problem, add any variables you wish to keep for future reference to the data frame using the $ form of assignment, and then detach();
 finally remove all unwanted variables from the working directory and keep it as clean of left-over temporary variables as possible.
 
-
-
-
-
