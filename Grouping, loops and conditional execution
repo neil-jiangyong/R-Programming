@@ -1,0 +1,23 @@
+Conditional execution: if statements
+
+The language has available a conditional construction of the form
+
+> if (expr_1) expr_2 else expr_3
+
+There is also a for loop construction which has the form
+
+> for (name in expr_1) expr_2
+
+Other looping facilities include the
+
+> repeat expr
+statement and the
+
+> while (condition) expr
+statement.
+
+The break statement can be used to terminate any loop, possibly abnormally. This is the only way to terminate repeat loops.
+
+The next statement can be used to discontinue one particular cycle and skip to the “next”.
+
+
