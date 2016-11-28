@@ -1,0 +1,26 @@
+The read.table() function
+
+To read an entire data frame directly,
+> HousePrice <- read.table("houses.data", header=TRUE);
+
+The scan() function
+
+To use scan() to read in the three vectors as a list.
+
+> inp <- scan("input.dat", list(id="", x=0, y=0)) # the first of mode character and the remaining two of mode numeric. 
+
+Editing and inputting new data
+
+> xnew <- edit(xold)
+
+> xnew <- edit(data.frame())
+
+
+
+
+
+
+
+
+
+
